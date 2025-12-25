@@ -1,1 +1,11 @@
 import telebot 
+
+token="7963787111:AAGHJtQKc0G0HN5Ph89e0SUoTZIpJsHGLkE"
+
+bot=telebot.telebot(token)
+
+@bot.message_handler(['start'])
+def start (message):
+bot.reply_to(message,"hello")
+
+bot.polling()
